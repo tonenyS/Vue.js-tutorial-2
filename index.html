@@ -11,17 +11,50 @@
     </stype>
     <body>
      <div id="vue-app">
-         <h2>FistName : {{setName('Mahidon')}}<br></h2>
+         <h2>FistName : {{name}}<br></h2>
          <h2> LastName : {{lastname}}<br></h2>
          <h2> Age : {{age}}<br></h2>
-         <h2>Facebook : <a v-bind:href="facebook">clickMe</a></h2>
-         <input type="text" name="" v-bind:value="name">
-         <input type="text" name="" v-bind:value="lastname"><br><br>
-         <input type="text" name="" v-bind:value="age">
-         <button type="button" v-on:click="agePlus">age+</button>
-         <button type="button" v-on:click="ageRub">age-</button><br><br>
-         <input type="text"  v-on:keyup.enter="addCount">
-         <h2>Count : {{count}}</h2>
+         <h2> Gender : {{gender}}<br></h2>
+         <h2> Hobby : {{Hobby}}<br></h2>
+         <h2>Facebook : <a v-bind:href="facebook">clickMe</a>
+        </h2><hr><br>
+
+        <!-- v-model คือ two Way Data Binding (TextBox) -->
+         <label>FistName :</label>
+         <input type="text" v-model="name"  placeholder="fistname" value="fistName"><br><br>
+         <label>LastName :</label>
+         <input type="text" v-model="lastname" placeholder="lastname"><br><br>
+         <label>Age :</label>
+         <button v-on:click="agePlus">age+</button>
+         <button v-on:click="ageRub">age-</button>
+        
+        
+         <br><br>
+
+         <!-- Two Way Data Binding (Radio Button) -->
+        
+         <label>Gender : </label>
+         <input type="radio" value="Male" v-model="gender">
+         <label>Male</label>
+         <input type="radio" value="Female" v-model="gender">
+         <label>Female</label>
+         <br>
+         <br>
+         <label>Selet Hobby : </label>
+         <input type="checkbox" value="Anime" v-model="Hobby">
+         <label>Anime</label>
+         <input type="checkbox" value="Movie" v-model="Hobby">
+         <label>Movie</label>
+         <input type="checkbox" value="Music" v-model="Hobby">
+         <label>Music</label>
+         <br><br>
+        
+
+        <!-- v-model คือ Two Way Data Binding (CheckBox) -->
+        <!-- vmodel คือเลือกตัวแปร -->
+        <hr>
+        <button>Save</button>
+        <button type="reset">Reset</button>
      </div>
     <script src="app.js" charsett="utf-8"></script>
     </body>

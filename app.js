@@ -2,17 +2,15 @@ new Vue ({
     el:"#vue-app",
     
     data:{
-        name : "mahidon",
-        lastname: "Thaipuvnart",
+        name : "",
+        lastname: "",
         age: 22,
         facebook : "https://www.facebook.com/toshiki.931/",
         count:0,
+        Hobby:[],
+        gender:""
     },
     methods:{
-        setName:function(n){
-            return this.name = n
-        },
-
         agePlus:function(){
             return this.age++
         },
@@ -22,7 +20,6 @@ new Vue ({
         },
         addCount:function(){
             this.count ++;
-            
-        }
+        }   
     }
 })
