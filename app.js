@@ -5,10 +5,12 @@ new Vue ({
         name : "",
         lastname: "",
         age: 22,
+        job:"",
         facebook : "https://www.facebook.com/toshiki.931/",
         count:0,
         Hobby:[],
         gender:""
+        
     },
     methods:{
         agePlus:function(){

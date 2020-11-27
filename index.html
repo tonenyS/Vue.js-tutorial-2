@@ -16,9 +16,11 @@
          <h2> Age : {{age}}<br></h2>
          <h2> Gender : {{gender}}<br></h2>
          <h2> Hobby : {{Hobby}}<br></h2>
+         <h2> Job : {{job}}<br></h2>
          <h2>Facebook : <a v-bind:href="facebook">clickMe</a>
         </h2><hr><br>
 
+        <!-- vmodel คือเลือกตัวแปร -->
         <!-- v-model คือ two Way Data Binding (TextBox) -->
          <label>FistName :</label>
          <input type="text" v-model="name"  placeholder="fistname" value="fistName"><br><br>
@@ -32,7 +34,6 @@
          <br><br>
 
          <!-- Two Way Data Binding (Radio Button) -->
-        
          <label>Gender : </label>
          <input type="radio" value="Male" v-model="gender">
          <label>Male</label>
@@ -40,6 +41,7 @@
          <label>Female</label>
          <br>
          <br>
+         <!-- v-model คือ Two Way Data Binding (CheckBox) -->
          <label>Selet Hobby : </label>
          <input type="checkbox" value="Anime" v-model="Hobby">
          <label>Anime</label>
@@ -48,10 +50,18 @@
          <input type="checkbox" value="Music" v-model="Hobby">
          <label>Music</label>
          <br><br>
+         
+         <label>Job :</label>
+         <select v-model="job">
+            <option disabled value="">select your job</option>
+            <option>FrontEnd Developer</option>
+            <option>BackEnd Developer</option>
+            <option>Full Stack</option>
+            <option>IT-support</option>
+            <option>IT-network</option>
+         </select>
+         <br><br>
         
-
-        <!-- v-model คือ Two Way Data Binding (CheckBox) -->
-        <!-- vmodel คือเลือกตัวแปร -->
         <hr>
         <button>Save</button>
         <button type="reset">Reset</button>
